@@ -1,11 +1,11 @@
 class Client(object):
 
-    def __init__(self, id_number: str, name: str, address: str, phone: str):
+    def __init__(self, id_number: str, name: str, address: str, phone: str, debt: float = 0.0):
         self.id_number = id_number
         self.name = name
         self.address = address
         self.phone = phone
-        self.debt = 0
+        self.debt = debt
 
     def reset_debt(self):
         self.debt = 0
