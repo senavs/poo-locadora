@@ -4,3 +4,5 @@ from project.entity.dbase import TableCollection
 db = TableCollection()
 # Client Table
 db.add_table('client')
+# Product Table
+db.add_table('product')
