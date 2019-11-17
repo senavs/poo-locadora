@@ -13,11 +13,11 @@ class ProductController(object):
         return db['product'].update(id, product.__dict__)
 
     @staticmethod
-    def delete_product(id):
+    def delete_product(id: int):
         return db['product'].delete(id)
 
     @staticmethod
-    def select_product(id):
+    def select_product(id: int):
         return db['product'].select(id)
 
     @staticmethod
@@ -26,8 +26,9 @@ class ProductController(object):
 
     @classmethod
     def add_quantity_product(cls, id: int, value: int):
-        product = Product(**cls.select_product(id))
+        product = cls.select_product(id)
         if product:
+            product = Product(product)
             product.add_quantity(value)
             cls.update_product(id, product)
             return True
