@@ -5,7 +5,10 @@ class Product(object):
         self.quantity = quantity
 
     def add_quantity(self, value: int):
-        self.quantity += value
+        if self.quantity + value < 0:
+            self.quantity = 0
+        else:
+            self.quantity += value
 
     def __repr__(self):
         return f'Product{self.name, self.quantity}'
