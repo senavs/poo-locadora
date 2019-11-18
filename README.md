@@ -20,7 +20,7 @@ To see how the entities and controllers work, there [notebooks](https://github.c
 ###### NOTE: [Register notebook](https://github.com/senavs/poo-locadora/blob/master/notebooks/poo-locadora-register.ipynb) calls all the others classes, so you can see all in register notebook.
 
 # Version
-**v1.0**
+**v.1.0.0**
 * Database table and table colletion
 * Client class, controller and notebook
 * Product class, controller and notebook
